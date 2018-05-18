@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  // numbers = [1, 2, 3, 4, 5];
+  oddNumbers = [1, 3, 5];
+  eventNumbers = [2, 4];
+  onlyOdd = false;
 }
