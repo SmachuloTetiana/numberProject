@@ -14,6 +14,8 @@
           <div *ngIf="onlyOdd">
             <li
               class="list-group-item" 
+              [ngClass]="{odd: odd % 2 !== 0}"
+              [ngStyle]="{backgroundColor: odd % 2 !== 0 ? 'gray' : 'transparent'}"
               *ngFor="let odd of oddNumbers">
               {{ odd }}
             </li>
@@ -22,11 +24,15 @@
           <div *ngIf="!onlyOdd">
             <li
               class="list-group-item" 
-              *ngFor="let event of eventNumbers">
-              {{ event }}
+              [ngClass]="{odd: even % 2 !== 0}"
+              [ngStyle]="{backgroundColor: even % 2 !== 0 ? 'gray' : 'transparent'}"
+              *ngFor="let even of evenNumbers">
+              {{ even }}
             </li>
           </div>          
         </ul>
+
+        <p appBasicHighlight>Use directive style</p>
     </div>
   </div>
 </div>
